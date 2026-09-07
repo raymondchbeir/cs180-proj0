@@ -9,15 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="assets/part1.css">
-  <link rel="stylesheet" href="assets/part2.css">
   <link rel="stylesheet" href="assets/part3.css">
-  <style>
-    .photo-visual{width:100%;aspect-ratio:160/213;background-color:#dfe3e6}
-    .gif-visual{width:100%;aspect-ratio:64/85;background-color:#111}
-    .sequence-note{max-width:640px;margin:-22px auto 38px;text-align:center;color:rgba(255,255,255,.55);font-size:.9rem}
-    @media(max-width:900px){.three-up .featured .photo-visual{aspect-ratio:160/213}}
-  </style>
 </head>
 <body>
 <header class="hero" id="top">
@@ -47,11 +39,11 @@
 <section class="project-section" id="part1">
   <div class="shell">
     <div class="section-heading"><div><p class="section-kicker">Part 1</p><h2>Selfie: The Wrong Way vs. The Right Way</h2></div><span class="section-number">01</span></div>
-    <p class="section-copy">I photographed the same person from three distances. As I moved farther away, I increased zoom. The closest portrait shows the strongest perspective distortion, while the farther portraits look increasingly compressed and natural.</p>
+    <p class="section-copy">I photographed the same person from three distances. As I moved farther away, I increased zoom so the face stayed roughly comparable in size. The closest portrait shows the strongest perspective distortion; the farther portraits look increasingly natural.</p>
     <div class="photo-grid three-up">
-      <figure class="photo-card featured"><div class="photo-visual p1 p1-1" role="img" aria-label="Close portrait"></div><figcaption><strong>Close-up</strong><span>Closest camera position</span></figcaption></figure>
-      <figure class="photo-card"><div class="photo-visual p1 p1-2" role="img" aria-label="Medium-distance portrait"></div><figcaption><strong>Medium distance</strong><span>Stepped back with more zoom</span></figcaption></figure>
-      <figure class="photo-card"><div class="photo-visual p1 p1-3" role="img" aria-label="Far portrait using zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Most compressed facial perspective</span></figcaption></figure>
+      <figure class="photo-card featured"><div class="sprite-photo sprite-1" role="img" aria-label="Close-up portrait"></div><figcaption><strong>Close-up</strong><span>Closest camera position</span></figcaption></figure>
+      <figure class="photo-card"><div class="sprite-photo sprite-2" role="img" aria-label="Medium-distance portrait"></div><figcaption><strong>Medium distance</strong><span>Stepped back with more zoom</span></figcaption></figure>
+      <figure class="photo-card"><div class="sprite-photo sprite-3" role="img" aria-label="Farther portrait using zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Most compressed facial perspective</span></figcaption></figure>
     </div>
     <div class="explanation-card"><div class="explanation-label">Why does the farther portrait look different?</div><p>When the camera is very close, the nose is much closer to the camera than the ears and sides of the face. That relative depth difference exaggerates nearby features. After stepping back, those depth differences are small compared with the total camera distance, so facial proportions look flatter and more natural. Zoom restores the subject's size in the frame; it is the changed camera position that changes the perspective.</p></div>
   </div>
@@ -60,10 +52,10 @@
 <section class="project-section alt" id="part2">
   <div class="shell">
     <div class="section-heading"><div><p class="section-kicker">Part 2</p><h2>Architectural Perspective Compression</h2></div><span class="section-number">02</span></div>
-    <p class="section-copy">I first photographed the building from farther away with a tighter field of view, then walked toward it and used a wider field of view. The change in camera position changes the apparent depth and convergence of the architecture.</p>
+    <p class="section-copy">I first photographed the building from farther away with a tighter field of view, then moved closer and used a wider field of view. The change in camera position changes the apparent depth and convergence of the architecture.</p>
     <div class="comparison-grid">
-      <figure class="photo-card wide-card"><div class="photo-visual p2 p2-1" role="img" aria-label="Building from farther away with zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Flatter, compressed appearance</span></figcaption></figure>
-      <figure class="photo-card wide-card"><div class="photo-visual p2 p2-2" role="img" aria-label="Building from closer with wide field of view"></div><figcaption><strong>Closer + wider view</strong><span>Stronger perspective and depth</span></figcaption></figure>
+      <figure class="photo-card"><div class="sprite-photo sprite-4" role="img" aria-label="Building from farther away with zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Flatter, compressed appearance</span></figcaption></figure>
+      <figure class="photo-card"><div class="sprite-photo sprite-5" role="img" aria-label="Building from closer with wider view"></div><figcaption><strong>Closer + wider view</strong><span>Stronger perspective and depth</span></figcaption></figure>
     </div>
     <div class="explanation-card"><div class="explanation-label">Why does distance create compression?</div><p>From farther away, the camera-to-object distances for the near and far parts of the building are relatively similar, so their projected sizes differ less. The scene therefore appears flatter. From closer up, the difference between those distances is a larger fraction of the total distance, so nearby surfaces appear larger and lines converge more strongly, emphasizing depth.</p></div>
   </div>
