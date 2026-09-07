@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="assets/part3.css">
 </head>
 <body>
 <header class="hero" id="top">
@@ -41,7 +40,7 @@
     <div class="section-heading"><div><p class="section-kicker">Part 1</p><h2>Selfie: The Wrong Way vs. The Right Way</h2></div><span class="section-number">01</span></div>
     <p class="section-copy">I photographed the same person from three distances. As I moved farther away, I increased zoom so the face stayed roughly comparable in size. The closest portrait shows the strongest perspective distortion; the farther portraits look increasingly natural.</p>
     <div class="photo-grid three-up">
-      <figure class="photo-card featured"><div class="sprite-photo sprite-1" role="img" aria-label="Close-up portrait"></div><figcaption><strong>Close-up</strong><span>Closest camera position</span></figcaption></figure>
+      <figure class="photo-card"><div class="sprite-photo sprite-1" role="img" aria-label="Close-up portrait"></div><figcaption><strong>Close-up</strong><span>Closest camera position</span></figcaption></figure>
       <figure class="photo-card"><div class="sprite-photo sprite-2" role="img" aria-label="Medium-distance portrait"></div><figcaption><strong>Medium distance</strong><span>Stepped back with more zoom</span></figcaption></figure>
       <figure class="photo-card"><div class="sprite-photo sprite-3" role="img" aria-label="Farther portrait using zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Most compressed facial perspective</span></figcaption></figure>
     </div>
@@ -65,7 +64,10 @@
   <div class="shell">
     <div class="section-heading light-heading"><div><p class="section-kicker gold">Part 3</p><h2>The Dolly Zoom</h2></div><span class="section-number">03</span></div>
     <p class="section-copy light-copy">For the dolly zoom, I used the stone sphere as the foreground subject and the Campanile/building area as the background. Across ten sequential frames I changed my camera position while compensating with zoom, creating the characteristic shift in the background relative to the foreground.</p>
-    <div class="gif-stage"><div class="gif-visual dolly-gif" role="img" aria-label="Animated ten-frame dolly zoom of the stone sphere"></div><div class="gif-badge">10-frame animated GIF</div></div>
+    <div class="gif-stage">
+      <img class="dolly-svg" src="images/dolly_zoom.svg" alt="Animated ten-frame dolly zoom of the stone sphere">
+      <div class="gif-badge">10-frame animated dolly zoom</div>
+    </div>
     <p class="sequence-note">IMG_1271 through IMG_1280, animated in the same order they were photographed.</p>
     <div class="explanation-card dark-card"><div class="explanation-label">What creates the effect?</div><p>A dolly zoom couples two changes: camera translation changes perspective, while a compensating change in focal length keeps the foreground subject at approximately the desired scale. Because objects at other depths do not transform in exactly the same way, the background appears to expand or contract relative to the subject. This is the classic “Vertigo shot” effect.</p></div>
   </div>
