@@ -9,6 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/part1.css">
+  <link rel="stylesheet" href="assets/part2.css">
+  <link rel="stylesheet" href="assets/part3.css">
+  <style>
+    .photo-visual{width:100%;aspect-ratio:160/213;background-color:#dfe3e6}
+    .gif-visual{width:100%;aspect-ratio:64/85;background-color:#111}
+    .sequence-note{max-width:640px;margin:-22px auto 38px;text-align:center;color:rgba(255,255,255,.55);font-size:.9rem}
+    @media(max-width:900px){.three-up .featured .photo-visual{aspect-ratio:160/213}}
+  </style>
 </head>
 <body>
 <header class="hero" id="top">
@@ -38,11 +47,11 @@
 <section class="project-section" id="part1">
   <div class="shell">
     <div class="section-heading"><div><p class="section-kicker">Part 1</p><h2>Selfie: The Wrong Way vs. The Right Way</h2></div><span class="section-number">01</span></div>
-    <p class="section-copy">I photographed the same person from three distances. As I moved farther away, I increased zoom so the face remained roughly comparable in size. The closest portrait shows the strongest perspective distortion; the farther portraits look increasingly natural.</p>
+    <p class="section-copy">I photographed the same person from three distances. As I moved farther away, I increased zoom. The closest portrait shows the strongest perspective distortion, while the farther portraits look increasingly compressed and natural.</p>
     <div class="photo-grid three-up">
-      <figure class="photo-card featured"><img src="images/part1_close.jpg" alt="Close portrait"><figcaption><strong>Close-up</strong><span>Closest camera position</span></figcaption></figure>
-      <figure class="photo-card"><img src="images/part1_mid.jpg" alt="Medium-distance portrait"><figcaption><strong>Medium distance</strong><span>Stepped back with more zoom</span></figcaption></figure>
-      <figure class="photo-card"><img src="images/part1_far_zoom.jpg" alt="Farther portrait using zoom"><figcaption><strong>Farther away + zoom</strong><span>Most compressed facial perspective</span></figcaption></figure>
+      <figure class="photo-card featured"><div class="photo-visual p1 p1-1" role="img" aria-label="Close portrait"></div><figcaption><strong>Close-up</strong><span>Closest camera position</span></figcaption></figure>
+      <figure class="photo-card"><div class="photo-visual p1 p1-2" role="img" aria-label="Medium-distance portrait"></div><figcaption><strong>Medium distance</strong><span>Stepped back with more zoom</span></figcaption></figure>
+      <figure class="photo-card"><div class="photo-visual p1 p1-3" role="img" aria-label="Far portrait using zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Most compressed facial perspective</span></figcaption></figure>
     </div>
     <div class="explanation-card"><div class="explanation-label">Why does the farther portrait look different?</div><p>When the camera is very close, the nose is much closer to the camera than the ears and sides of the face. That relative depth difference exaggerates nearby features. After stepping back, those depth differences are small compared with the total camera distance, so facial proportions look flatter and more natural. Zoom restores the subject's size in the frame; it is the changed camera position that changes the perspective.</p></div>
   </div>
@@ -51,10 +60,10 @@
 <section class="project-section alt" id="part2">
   <div class="shell">
     <div class="section-heading"><div><p class="section-kicker">Part 2</p><h2>Architectural Perspective Compression</h2></div><span class="section-number">02</span></div>
-    <p class="section-copy">I first photographed the building from farther away with a tighter field of view, then moved closer and used a wider field of view. The two views show how changing the center of projection changes the apparent depth and convergence of the architecture.</p>
+    <p class="section-copy">I first photographed the building from farther away with a tighter field of view, then walked toward it and used a wider field of view. The change in camera position changes the apparent depth and convergence of the architecture.</p>
     <div class="comparison-grid">
-      <figure class="photo-card wide-card"><img src="images/part2_far_zoom.jpg" alt="Building from farther away with zoom"><figcaption><strong>Farther away + zoom</strong><span>Flatter, compressed appearance</span></figcaption></figure>
-      <figure class="photo-card wide-card"><img src="images/part2_close_wide.jpg" alt="Building from closer with a wider view"><figcaption><strong>Closer + wider view</strong><span>Stronger perspective and depth</span></figcaption></figure>
+      <figure class="photo-card wide-card"><div class="photo-visual p2 p2-1" role="img" aria-label="Building from farther away with zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Flatter, compressed appearance</span></figcaption></figure>
+      <figure class="photo-card wide-card"><div class="photo-visual p2 p2-2" role="img" aria-label="Building from closer with wide field of view"></div><figcaption><strong>Closer + wider view</strong><span>Stronger perspective and depth</span></figcaption></figure>
     </div>
     <div class="explanation-card"><div class="explanation-label">Why does distance create compression?</div><p>From farther away, the camera-to-object distances for the near and far parts of the building are relatively similar, so their projected sizes differ less. The scene therefore appears flatter. From closer up, the difference between those distances is a larger fraction of the total distance, so nearby surfaces appear larger and lines converge more strongly, emphasizing depth.</p></div>
   </div>
@@ -63,13 +72,10 @@
 <section class="project-section dark" id="part3">
   <div class="shell">
     <div class="section-heading light-heading"><div><p class="section-kicker gold">Part 3</p><h2>The Dolly Zoom</h2></div><span class="section-number">03</span></div>
-    <p class="section-copy light-copy">For the dolly zoom, I used the stone sphere as my foreground reference and the Campanile/building area as the background. I moved the camera while changing zoom across ten frames. The foreground stays in a similar visual role while the background changes scale and composition, producing the classic dolly-zoom effect.</p>
-    <div class="gif-stage"><img src="images/dolly_zoom.gif" alt="Animated dolly zoom sequence using a stone sphere"><div class="gif-badge">10-frame animated GIF</div></div>
-    <div class="frame-intro"><strong>Original sequence</strong><span>Frames are shown below in the same order they were photographed.</span></div>
-    <div class="frame-strip" aria-label="Ten dolly zoom still frames">
-      <img src="images/part3_01.jpg" alt="Dolly zoom frame 1"><img src="images/part3_02.jpg" alt="Dolly zoom frame 2"><img src="images/part3_03.jpg" alt="Dolly zoom frame 3"><img src="images/part3_04.jpg" alt="Dolly zoom frame 4"><img src="images/part3_05.jpg" alt="Dolly zoom frame 5"><img src="images/part3_06.jpg" alt="Dolly zoom frame 6"><img src="images/part3_07.jpg" alt="Dolly zoom frame 7"><img src="images/part3_08.jpg" alt="Dolly zoom frame 8"><img src="images/part3_09.jpg" alt="Dolly zoom frame 9"><img src="images/part3_10.jpg" alt="Dolly zoom frame 10">
-    </div>
-    <div class="explanation-card dark-card"><div class="explanation-label">What creates the effect?</div><p>A dolly zoom couples two changes: camera translation changes perspective, while a compensating change in focal length keeps the chosen foreground subject at approximately the desired scale. Because objects at other depths do not transform in exactly the same way, the background appears to expand or contract relative to the subject. This is the visual effect associated with the “Vertigo shot.”</p></div>
+    <p class="section-copy light-copy">For the dolly zoom, I used the stone sphere as the foreground subject and the Campanile/building area as the background. Across ten sequential frames I changed my camera position while compensating with zoom, creating the characteristic shift in the background relative to the foreground.</p>
+    <div class="gif-stage"><div class="gif-visual dolly-gif" role="img" aria-label="Animated ten-frame dolly zoom of the stone sphere"></div><div class="gif-badge">10-frame animated GIF</div></div>
+    <p class="sequence-note">IMG_1271 through IMG_1280, animated in the same order they were photographed.</p>
+    <div class="explanation-card dark-card"><div class="explanation-label">What creates the effect?</div><p>A dolly zoom couples two changes: camera translation changes perspective, while a compensating change in focal length keeps the foreground subject at approximately the desired scale. Because objects at other depths do not transform in exactly the same way, the background appears to expand or contract relative to the subject. This is the classic “Vertigo shot” effect.</p></div>
   </div>
 </section>
 </main>
