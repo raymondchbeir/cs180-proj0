@@ -9,6 +9,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .photo-sprite{width:100%;aspect-ratio:3/4;background-repeat:no-repeat;background-position-y:center}
+    .p1{background-image:url('images/part1.webp');background-size:300% 100%}
+    .p1-1{background-position:0 0}.p1-2{background-position:50% 0}.p1-3{background-position:100% 0}
+    .p2{background-image:url('images/part2.webp');background-size:200% 100%}
+    .p2-1{background-position:0 0}.p2-2{background-position:100% 0}
+    .comparison-grid{max-width:960px;margin-left:auto;margin-right:auto}
+    .dolly-player{width:min(300px,100%);aspect-ratio:3/4;margin:0 auto;background-image:url('images/part3.webp');background-repeat:no-repeat;background-size:1000% 100%;background-position:0 0}
+    .gif-stage{width:min(380px,100%)}
+    .frame-strip{grid-template-columns:repeat(5,1fr)}
+    .dolly-thumb{width:100%;aspect-ratio:3/4;background-image:url('images/part3.webp');background-repeat:no-repeat;background-size:1000% 100%;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
+    @media(max-width:640px){.frame-strip{grid-template-columns:repeat(2,1fr)}}
+  </style>
 </head>
 <body>
 <header class="hero" id="top">
@@ -40,9 +53,9 @@
     <div class="section-heading"><div><p class="section-kicker">Part 1</p><h2>Selfie: The Wrong Way vs. The Right Way</h2></div><span class="section-number">01</span></div>
     <p class="section-copy">I photographed the same person from three distances. As I moved farther away, I increased zoom so the face stayed roughly comparable in size. The closest portrait shows the strongest perspective distortion; the farther portraits look increasingly natural.</p>
     <div class="photo-grid three-up">
-      <figure class="photo-card"><div class="sprite-photo sprite-1" role="img" aria-label="Close-up portrait"></div><figcaption><strong>Close-up</strong><span>Closest camera position</span></figcaption></figure>
-      <figure class="photo-card"><div class="sprite-photo sprite-2" role="img" aria-label="Medium-distance portrait"></div><figcaption><strong>Medium distance</strong><span>Stepped back with more zoom</span></figcaption></figure>
-      <figure class="photo-card"><div class="sprite-photo sprite-3" role="img" aria-label="Farther portrait using zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Most compressed facial perspective</span></figcaption></figure>
+      <figure class="photo-card"><div class="photo-sprite p1 p1-1" role="img" aria-label="Close-up portrait"></div><figcaption><strong>Close-up</strong><span>Closest camera position</span></figcaption></figure>
+      <figure class="photo-card"><div class="photo-sprite p1 p1-2" role="img" aria-label="Medium-distance portrait"></div><figcaption><strong>Medium distance</strong><span>Stepped back with more zoom</span></figcaption></figure>
+      <figure class="photo-card"><div class="photo-sprite p1 p1-3" role="img" aria-label="Farther portrait using zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Most compressed facial perspective</span></figcaption></figure>
     </div>
     <div class="explanation-card"><div class="explanation-label">Why does the farther portrait look different?</div><p>When the camera is very close, the nose is much closer to the camera than the ears and sides of the face. That relative depth difference exaggerates nearby features. After stepping back, those depth differences are small compared with the total camera distance, so facial proportions look flatter and more natural. Zoom restores the subject's size in the frame; it is the changed camera position that changes the perspective.</p></div>
   </div>
@@ -53,8 +66,8 @@
     <div class="section-heading"><div><p class="section-kicker">Part 2</p><h2>Architectural Perspective Compression</h2></div><span class="section-number">02</span></div>
     <p class="section-copy">I first photographed the building from farther away with a tighter field of view, then moved closer and used a wider field of view. The change in camera position changes the apparent depth and convergence of the architecture.</p>
     <div class="comparison-grid">
-      <figure class="photo-card"><div class="sprite-photo sprite-4" role="img" aria-label="Building from farther away with zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Flatter, compressed appearance</span></figcaption></figure>
-      <figure class="photo-card"><div class="sprite-photo sprite-5" role="img" aria-label="Building from closer with wider view"></div><figcaption><strong>Closer + wider view</strong><span>Stronger perspective and depth</span></figcaption></figure>
+      <figure class="photo-card"><div class="photo-sprite p2 p2-1" role="img" aria-label="Building from farther away with zoom"></div><figcaption><strong>Farther away + zoom</strong><span>Flatter, compressed appearance</span></figcaption></figure>
+      <figure class="photo-card"><div class="photo-sprite p2 p2-2" role="img" aria-label="Building from closer with wider view"></div><figcaption><strong>Closer + wider view</strong><span>Stronger perspective and depth</span></figcaption></figure>
     </div>
     <div class="explanation-card"><div class="explanation-label">Why does distance create compression?</div><p>From farther away, the camera-to-object distances for the near and far parts of the building are relatively similar, so their projected sizes differ less. The scene therefore appears flatter. From closer up, the difference between those distances is a larger fraction of the total distance, so nearby surfaces appear larger and lines converge more strongly, emphasizing depth.</p></div>
   </div>
@@ -65,15 +78,26 @@
     <div class="section-heading light-heading"><div><p class="section-kicker gold">Part 3</p><h2>The Dolly Zoom</h2></div><span class="section-number">03</span></div>
     <p class="section-copy light-copy">For the dolly zoom, I used the stone sphere as the foreground subject and the Campanile/building area as the background. Across ten sequential frames I changed my camera position while compensating with zoom, creating the characteristic shift in the background relative to the foreground.</p>
     <div class="gif-stage">
-      <img class="dolly-svg" src="images/dolly_zoom.svg" alt="Animated ten-frame dolly zoom of the stone sphere">
+      <div id="dolly-player" class="dolly-player" role="img" aria-label="Animated ten-frame dolly zoom of the stone sphere"></div>
       <div class="gif-badge">10-frame animated dolly zoom</div>
     </div>
-    <p class="sequence-note">IMG_1271 through IMG_1280, animated in the same order they were photographed.</p>
+    <div class="frame-intro"><strong>Original sequence</strong><span>IMG_1271 through IMG_1280, in the same order they were photographed.</span></div>
+    <div class="frame-strip" aria-label="Ten dolly zoom still frames">
+      <div class="dolly-thumb" data-frame="0"></div><div class="dolly-thumb" data-frame="1"></div><div class="dolly-thumb" data-frame="2"></div><div class="dolly-thumb" data-frame="3"></div><div class="dolly-thumb" data-frame="4"></div><div class="dolly-thumb" data-frame="5"></div><div class="dolly-thumb" data-frame="6"></div><div class="dolly-thumb" data-frame="7"></div><div class="dolly-thumb" data-frame="8"></div><div class="dolly-thumb" data-frame="9"></div>
+    </div>
     <div class="explanation-card dark-card"><div class="explanation-label">What creates the effect?</div><p>A dolly zoom couples two changes: camera translation changes perspective, while a compensating change in focal length keeps the foreground subject at approximately the desired scale. Because objects at other depths do not transform in exactly the same way, the background appears to expand or contract relative to the subject. This is the classic “Vertigo shot” effect.</p></div>
   </div>
 </section>
 </main>
 
 <footer><div class="shell footer-content"><div><strong>CS180 · Project 0</strong><p>Becoming Friends with Your Camera</p></div><a href="#top">Back to top ↑</a></div></footer>
+<script>
+  const pos = i => `${i * (100/9)}% 0`;
+  document.querySelectorAll('.dolly-thumb').forEach((el,i)=>el.style.backgroundPosition=pos(i));
+  const player=document.getElementById('dolly-player');
+  const bounce=[0,1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,1];
+  let frame=0;
+  setInterval(()=>{frame=(frame+1)%bounce.length;player.style.backgroundPosition=pos(bounce[frame]);},180);
+</script>
 </body>
 </html>
