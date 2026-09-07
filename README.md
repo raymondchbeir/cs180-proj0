@@ -1,5 +1,5 @@
 # CS180 Project 0 — Becoming Friends with Your Camera
 
-Raymond Chbeir's CS180 Project 0 website.
+Live project site for UC Berkeley CS180, Fall 2026.
 
-The live site is published with GitHub Pages from the repository root.
+Photos and dolly-zoom sequence are included in the site assets.
